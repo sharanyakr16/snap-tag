@@ -5,10 +5,11 @@ const boxSDK = appConfig.boxSDK;                // Box SDK
 const TokenStore = require('./token-store.js'); // Token storage
 
 router.get('/', function(req, res) {
+    res.render('index');
     // Extract auth code and state
     const state = req.query.state;
     const code = req.query.code;
-    res.render('index');
+
     //res.send('index');
     const sdk = new boxSDK({
         clientID: appConfig.oauthClientId,
