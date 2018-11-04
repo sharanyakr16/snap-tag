@@ -64,7 +64,7 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 const client = sdk.getAppAuthClient('enterprise');
 
 // Upload file
-const stream = fs.createReadStream('./public/images/image1541332859480.png');
+const stream = fs.createReadStream('./public/images/' +req.query.img);
 client.files.uploadFile('0', 'temp'+Date.now()+'.jpg', stream).then(file => {
     console.log(util.inspect(file, false, null));
 }).catch(function (err) {
