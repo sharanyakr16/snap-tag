@@ -36,11 +36,12 @@ app.post('/images',(req,res)=>{
         }
     })
 });
+
 app.use('/', indexRouter);
-app.use('/', imagesUpload);
+//app.use('/', imagesUpload);
 app.use('/users', usersRouter);
 app.use('/image_upload',imageRouter);
 app.use('/auth',boxAuth);
 app.use('/return', returnCode);
-// app.use('/images', imagesUpload);
+//app.use('/images', imagesUpload);
 module.exports = app;

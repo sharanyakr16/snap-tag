@@ -64,11 +64,11 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 const client = sdk.getAppAuthClient('enterprise');
 
 // Upload file
-const stream = fs.createReadStream('./public/images/' +req.query.img);
-client.files.uploadFile('0', 'temp'+Date.now()+'.jpg', stream).then(file => {
-    console.log(util.inspect(file, false, null));
-}).catch(function (err) {
-    console.log(util.inspect(err.response.body, false, null));
-});
+// const stream = fs.createReadStream('./public/images/' +req.query.img);
+// client.files.uploadFile('0', 'temp'+Date.now()+'.jpg', stream).then(file => {
+//     console.log(util.inspect(file, false, null));
+// }).catch(function (err) {
+//     console.log(util.inspect(err.response.body, false, null));
+// });
 
 module.exports = router;
